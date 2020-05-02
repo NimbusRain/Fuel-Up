@@ -40,7 +40,7 @@ public class SoundController : MonoBehaviour
         {
             PlaySound("Fire");
         }
-        if (Input.GetButton("Jump"))
+        if (Input.GetButtonDown("Jump"))
         {
             PlaySound("Jump");
         }
