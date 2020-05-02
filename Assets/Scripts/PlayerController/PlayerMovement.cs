@@ -28,6 +28,7 @@ public class PlayerMovement : MonoBehaviour
     bool isGrounded;
 
     // Update is called once per frame
+
     void Update()
     {
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
@@ -80,7 +81,7 @@ public class PlayerMovement : MonoBehaviour
         {
             //We don't need a separate velocity mod here as the gravity code below will drag us back to the ground
             flying = false;
-            Debug.Log("Dropping");
+            //Debug.Log("Dropping");
 
             //Fuel got added every frame, which meant we could fly infinitely as the jetpack would just turn on and off. So I changed the value here.
             if (fuel < 100)
@@ -121,7 +122,7 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
-        Debug.Log("Flying = " + flying);
+        //Debug.Log("Flying = " + flying);
 
         velocity.y += gravity * Time.deltaTime;
 
