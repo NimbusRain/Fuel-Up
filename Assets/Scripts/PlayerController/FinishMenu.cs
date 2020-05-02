@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class Instructions : MonoBehaviour
+public class FinishMenu : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -13,6 +14,9 @@ public class Instructions : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (gameObject.activeInHierarchy)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
     }
 }
